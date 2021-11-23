@@ -27,6 +27,10 @@ section.hero{
     background: $secondary;
 }
 
+@import './variables';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 .add-to-cart {
     border: 2px solid $primary;
     color: $primary;
@@ -35,6 +39,9 @@ section.hero{
         background: $primary;
         border-color: $pure;
         color: $pure;
+    }
+    &:focus{
+        outline: none;
     }
 }
 
@@ -58,4 +65,9 @@ section.login{
             color: $primary-hover;
         }
     }
+}
+
+.noty_theme__mint {
+    border-radius: 50px!important;
+    padding-left: 8px!important;
 }
