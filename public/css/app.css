@@ -5,17 +5,17 @@ body {
 }
 
 nav li:last-child a {
-  background: #FE5F1E;
+  background: #0ba6ff;
 }
 nav li:last-child a:hover {
-  background: #b23301;
+  background: #0ba6ff;
 }
 
 nav li a {
   transition: all 0.3s ease-in-out;
 }
 nav li a:hover {
-  color: #FE5F1E;
+  color: #0ba6ff;
 }
 
 section.hero {
@@ -304,12 +304,12 @@ section.hero {
 }
 
 .add-to-cart {
-  border: 2px solid #FE5F1E;
-  color: #FE5F1E;
+  border: 2px solid #0ba6ff;
+  color: #0ba6ff;
   transition: all 0.3s ease-in-out;
 }
 .add-to-cart:hover {
-  background: #FE5F1E;
+  background: #0ba6ff;
   border-color: #fff;
   color: #fff;
 }
@@ -318,11 +318,11 @@ section.hero {
 }
 
 .btn-primary {
-  background: #FE5F1E;
+  background: #0ba6ff;
   transition: all 0.3s ease-in-out;
 }
 .btn-primary:hover {
-  background: #b23301;
+  background: #0ba6ff;
 }
 
 section.cart {
@@ -334,10 +334,10 @@ section.login {
   min-height: 500px;
 }
 section.login a {
-  color: #FE5F1E;
+  color: #0ba6ff;
 }
 section.login a:hover {
-  color: #b23301;
+  color: #0ba6ff;
 }
 
 .noty_theme__mint {
@@ -346,7 +346,7 @@ section.login a:hover {
 }
 
 a.link {
-  color: #FE5F1E;
+  color: #0ba6ff;
 }
 
 section.status {
@@ -439,15 +439,36 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #FE5F1E;
+  color: #0ba6ff;
 }
 
 .status-box ul li.current span:after {
-  background: #FE5F1E;
+  background: #0ba6ff;
 }
 
 .status-box ul li small {
   float: right;
   font-size: 14px;
   margin-top: 8px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.pk {
+  opacity: 0.8;
+}
+
+@media (max-width: 1060px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
 }
