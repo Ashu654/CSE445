@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -5,17 +12,17 @@ body {
 }
 
 nav li:last-child a {
-  background: #0ba6ff;
+  background: #4ABDAC;
 }
 nav li:last-child a:hover {
-  background: #0ba6ff;
+  background: #66CDAA;
 }
 
 nav li a {
   transition: all 0.3s ease-in-out;
 }
 nav li a:hover {
-  color: #0ba6ff;
+  color: #4ABDAC;
 }
 
 section.hero {
@@ -304,12 +311,12 @@ section.hero {
 }
 
 .add-to-cart {
-  border: 2px solid #0ba6ff;
-  color: #0ba6ff;
+  border: 2px solid #4ABDAC;
+  color: #4ABDAC;
   transition: all 0.3s ease-in-out;
 }
 .add-to-cart:hover {
-  background: #0ba6ff;
+  background: #4ABDAC;
   border-color: #fff;
   color: #fff;
 }
@@ -318,11 +325,11 @@ section.hero {
 }
 
 .btn-primary {
-  background: #0ba6ff;
+  background: #4ABDAC;
   transition: all 0.3s ease-in-out;
 }
 .btn-primary:hover {
-  background: #0ba6ff;
+  background: #66CDAA;
 }
 
 section.cart {
@@ -334,10 +341,10 @@ section.login {
   min-height: 500px;
 }
 section.login a {
-  color: #0ba6ff;
+  color: #4ABDAC;
 }
 section.login a:hover {
-  color: #0ba6ff;
+  color: #66CDAA;
 }
 
 .noty_theme__mint {
@@ -346,7 +353,7 @@ section.login a:hover {
 }
 
 a.link {
-  color: #0ba6ff;
+  color: #4ABDAC;
 }
 
 section.status {
@@ -439,11 +446,11 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #0ba6ff;
+  color: #4ABDAC;
 }
 
 .status-box ul li.current span:after {
-  background: #0ba6ff;
+  background: #4ABDAC;
 }
 
 .status-box ul li small {
@@ -471,4 +478,87 @@ section.status {
   .status-box ul li span:before {
     font-size: 34px;
   }
+}
+.h1 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.h4 {
+  font-weight: bold;
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #F8F8F8;
+  font-family: "Roboto", sans-serif;
+}
+
+section.chat__section {
+  width: 800px;
+  max-width: 90%;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+  padding: 20px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+}
+
+.brand h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #444;
+  margin-left: 10px;
+}
+
+.message__area {
+  height: 500px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 40px;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  background: #FBFBFB;
+}
+
+.message {
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  position: relative;
+}
+
+.incoming {
+  background: #4ABDAC;
+  color: #fff;
+}
+
+.outgoing {
+  background: #8F8BE8;
+  color: #fff;
+  margin-left: auto;
+}
+
+.message h4 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #333;
+  font-size: 14px;
 }

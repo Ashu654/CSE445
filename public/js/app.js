@@ -2217,9 +2217,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var addToCart = document.querySelectorAll('.add-to-cart');
 var cartCounter = document.querySelector('#cartCounter');
+var counter = document.querySelector('#counter'); //
 
-function updateCart(pizza) {
-  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', pizza).then(function (res) {
+function updateCart(product) {
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', product).then(function (res) {
     cartCounter.innerText = res.data.totalQty;
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
       type: 'success',
@@ -2239,10 +2240,33 @@ function updateCart(pizza) {
 
 addToCart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
-    var pizza = JSON.parse(btn.dataset.pizza);
-    updateCart(pizza);
+    var product = JSON.parse(btn.dataset.product);
+    updateCart(product);
   });
-}); //remove alert messages after X seconds
+});
+var increase = document.querySelectorAll('.increase'); //
+
+function updateQty1(product) {
+  //
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/updateQty1', product).then(function (res) {
+    //
+    console.log(res);
+    counter.innerText = res.data.updatedQty1; // 
+    //
+  }); //
+} //
+
+
+increase.forEach(function (btn) {
+  //
+  btn.addEventListener('click', function (e) {
+    //  
+    var product = JSON.parse(btn.dataset.product);
+    updateQty1(product); //console.log(product) 
+    //
+  }); //
+}); //
+//remove alert messages after X seconds
 
 var alertMsg = document.querySelector('#success-alert');
 
@@ -2284,7 +2308,8 @@ function updateStatus(order) {
   });
 }
 
-updateStatus(order);
+updateStatus(order); //chat app
+
 (0,_admin__WEBPACK_IMPORTED_MODULE_3__.initAdmin)();
 
 /***/ }),

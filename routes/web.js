@@ -20,7 +20,8 @@ function initRoutes(app){
     app.post('/logout',authController().logout)
     app.get('/cart',cartController().index)
     app.post('/update-cart',cartController().update)
-
+    app.post('/updateQty1',cartController().updateQty1)  //
+ 
     //customers routes
     app.post('/orders',auth,orderController().store)
     app.get('/customer/orders',auth,orderController().index)

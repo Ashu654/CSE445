@@ -4,8 +4,10 @@ import moment from 'moment'
 import {initAdmin} from './admin'
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter=document.querySelector('#cartCounter')
-function updateCart(pizza) {
-    axios.post('/update-cart', pizza).then(res => {
+let counter=document.querySelector('#counter')//
+
+function updateCart(product) {
+    axios.post('/update-cart', product).then(res => {
         cartCounter.innerText= res.data.totalQty
         new Noty({
             type:'success',
@@ -25,10 +27,36 @@ function updateCart(pizza) {
 
 addToCart.forEach((btn) => {
    btn.addEventListener('click', (e) => {
-    let pizza= JSON.parse(btn.dataset.pizza)
-      updateCart(pizza)
+    let product= JSON.parse(btn.dataset.product)
+      updateCart(product)
     })
 })
+
+
+let increase = document.querySelectorAll('.increase') //
+function updateQty1(product){                          //
+    axios.post('/updateQty1',product).then(res=>{       //
+    console.log(res)  
+    counter.innerText= res.data.updatedQty1   // 
+                                                 //
+    })                                                //
+}                                                     //
+
+
+increase.forEach((btn) => {                          //
+    btn.addEventListener('click', (e) => {           //  
+     let product= JSON.parse(btn.dataset.product)
+     updateQty1(product)
+     //console.log(product) 
+                                                          //
+     })                                              //
+ })                                                  //
+
+
+
+
+
+
 
 //remove alert messages after X seconds
 const alertMsg=document.querySelector('#success-alert')
@@ -69,4 +97,7 @@ function updateStatus(order) {
 
 updateStatus(order);
 
-initAdmin()
+//chat app
+
+
+initAdmin() 

@@ -10,6 +10,9 @@ const session = require('express-session')
 const flash = require('express-flash')
 const MongoDbStore = require('connect-mongo')(session)
 const passport=require('passport')
+const http=require('http').createServer(app)
+
+
 
 //database connection
 mongoose.connect('mongodb://localhost:27017/pizza');
@@ -21,7 +24,7 @@ db.once('open', function() {
 });
 
 
-// Session store
+// storing Session 
 let mongoStore = new MongoDbStore({
     mongooseConnection: db,
     collection: 'sessions'
@@ -62,6 +65,24 @@ app.set('view engine', 'ejs')
 
 require('./routes/web')(app)
 
- app.listen(PORT , () => {
+ const server =app.listen(PORT , () => {
     console.log(`Listening on port ${PORT}`)
+})
+
+//chat app route
+app.get('/chat',(req,res)=>{
+    res.render('chat')
+})
+
+
+// Socket connection
+
+const io = require('socket.io')(server)
+
+io.on('connection', (socket) => {
+    console.log('Connected...')
+    socket.on('message', (msg) => {
+        socket.broadcast.emit('message', msg)
+    })
+
 })

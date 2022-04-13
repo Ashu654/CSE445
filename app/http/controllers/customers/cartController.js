@@ -3,7 +3,16 @@ function cartController() {
         index(req, res) {
             res.render('customers/cart')
         },
-        
+
+        updateQty1(req,res){                   //
+           let cart =req.session.cart
+            cart.items[req.body.item._id].qty= cart.items[req.body.item._id].qty +1
+           console.log(cart.items[req.body.item._id].qty)
+           return res.json({updatedQty1:cart.items[req.body.item._id].qty})
+                                               //                        
+        } ,                                       //                       
+
+
         update(req, res) {
             // let cart = {
             //     items: {
