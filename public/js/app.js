@@ -2217,7 +2217,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var addToCart = document.querySelectorAll('.add-to-cart');
 var cartCounter = document.querySelector('#cartCounter');
-var counter = document.querySelector('#counter'); //
+var counter1 = document.querySelector('#counter1');
+var updated_price = document.querySelector('#updated_price');
 
 function updateCart(product) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', product).then(function (res) {
@@ -2250,9 +2251,26 @@ function updateQty1(product) {
   //
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/updateQty1', product).then(function (res) {
     //
-    console.log(res);
-    counter.innerText = res.data.updatedQty1; // 
+    console.log(res); //
+
+    counter1.innerHTML = res.data.updatedQty1; //
+
+    updated_price.innerHTML = res.data.updated_price; //
+  }); //
+} //
+
+
+var decrease = document.querySelectorAll('.decrease'); //
+
+function updateQty2(product) {
+  //
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/updateQty2', product).then(function (res) {
     //
+    console.log(res); //
+
+    counter1.innerHTML = res.data.updatedQty2; //
+
+    updated_price.innerHTML = res.data.updated_price; //
   }); //
 } //
 
@@ -2263,6 +2281,16 @@ increase.forEach(function (btn) {
     //  
     var product = JSON.parse(btn.dataset.product);
     updateQty1(product); //console.log(product) 
+    //
+  }); //
+}); //
+
+decrease.forEach(function (btn) {
+  //
+  btn.addEventListener('click', function (e) {
+    //  
+    var product = JSON.parse(btn.dataset.product);
+    updateQty2(product); //console.log(product) 
     //
   }); //
 }); //
@@ -2308,8 +2336,7 @@ function updateStatus(order) {
   });
 }
 
-updateStatus(order); //chat app
-
+updateStatus(order);
 (0,_admin__WEBPACK_IMPORTED_MODULE_3__.initAdmin)();
 
 /***/ }),

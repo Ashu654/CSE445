@@ -18,9 +18,10 @@
         let textarea = document.querySelector('#textarea')
         let messageArea = document.querySelector('.message__area')
 
-        do {
+        if(!name){
         name = prompt('Please enter your name: ')
-        } while(!name)
+        }
+        
         textarea.addEventListener('keyup', (e) => {
         if(e.key === 'Enter') {
         sendMessage(e.target.value)

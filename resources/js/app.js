@@ -4,8 +4,6 @@ import moment from 'moment'
 import {initAdmin} from './admin'
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter=document.querySelector('#cartCounter')
-let counter=document.querySelector('#counter')//
-
 function updateCart(product) {
     axios.post('/update-cart', product).then(res => {
         cartCounter.innerText= res.data.totalQty
@@ -31,28 +29,6 @@ addToCart.forEach((btn) => {
       updateCart(product)
     })
 })
-
-
-let increase = document.querySelectorAll('.increase') //
-function updateQty1(product){                          //
-    axios.post('/updateQty1',product).then(res=>{       //
-    console.log(res)  
-    counter.innerText= res.data.updatedQty1   // 
-                                                 //
-    })                                                //
-}                                                     //
-
-
-increase.forEach((btn) => {                          //
-    btn.addEventListener('click', (e) => {           //  
-     let product= JSON.parse(btn.dataset.product)
-     updateQty1(product)
-     //console.log(product) 
-                                                          //
-     })                                              //
- })                                                  //
-
-
 
 
 
@@ -97,7 +73,6 @@ function updateStatus(order) {
 
 updateStatus(order);
 
-//chat app
 
 
 initAdmin() 
