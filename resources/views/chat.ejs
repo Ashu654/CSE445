@@ -18,8 +18,10 @@
         let textarea = document.querySelector('#textarea')
         let messageArea = document.querySelector('.message__area')
 
+        
+        name = prompt('Please enter your name for chat : ')
         if(!name){
-        name = prompt('Please enter your name: ')
+            name="Anonymous"
         }
         
         textarea.addEventListener('keyup', (e) => {

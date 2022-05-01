@@ -15,7 +15,7 @@ const http=require('http').createServer(app)
 
 
 //database connection
-mongoose.connect('mongodb://localhost:27017/pizza');
+mongoose.connect(process.env.MONGO_CONNECTION_URL);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
  

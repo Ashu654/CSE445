@@ -4,7 +4,7 @@
             <div class="w-1/2">
                 <h6 class="text-lg"><em>Come and</em></h6>
                 <h1 class="text-3xl md:text-6xl font-bold">Let's make shopping more interesting !</h1>
-            <a href="/cart"><button class="btn-primary py-2 px-6 rounded-full mt-4 text-white font-bold" >Go to cart</button></a>
+            <a href="#featured_products"><button class="btn-primary py-2 px-6 rounded-full mt-4 text-white font-bold" >Shop now</button></a>
             </div>
             <div class="w-1/3">
                 <img src="/img/home-page.png" alt="" width="400px">
@@ -12,7 +12,7 @@
         </div>
     </section>
 
-    <section class=" container mx-auto py-8 w-5/6">
+    <section id="featured_products" class=" container mx-auto py-8 w-5/6">
         <h1 class="text-xl font-bold mb-8">Some featured Products</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-16 row-gap-16">
             <% products.forEach(function(product){ %>

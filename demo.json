@@ -1,0 +1,10 @@
+[
+{"name":"Shoes","image":"shoes.png","price":"350","size":"Medium"},
+{"name":"Sunglasses","image":"sunglasses.png","price":"300","size":"medium"},
+{"name":"Shirt","image":"black_shirt.png","price":"400","size":"xl"},
+{"name":"T-shirt","image":"t_shirt.png","price":"500","size":"xl"},
+{"name":"Burger","image":"burger.png","price":"40","size":"small"},
+{"name":"Coke","image":"coke.png","price":"20","size":"small"},
+{"name":"Pop-corn","image":"pop_corn.png","price":"30","size":"small"},
+{"name":"Pizza","image":"pizza3.png","price":"120","size":"medium"}
+]

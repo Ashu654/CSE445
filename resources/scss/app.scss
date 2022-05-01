@@ -11,11 +11,11 @@ body {
        color: $dark;
 }
 
-nav li:last-child a {
-    background: $primary;
-    &:hover {
-        background: $primary-hover;
-    }
+      nav li:last-child a {
+      background: $primary;
+      &:hover {
+      background: $primary-hover;
+   }
 }
 
 nav li a {
@@ -24,6 +24,7 @@ nav li a {
         color: $primary;
     }
 }
+
 section.hero{
     background: $secondary;
 }
@@ -285,3 +286,10 @@ textarea {
     color: #333;
     font-size: 14px;
 }
+
+.footer-links {
+    a {
+      padding-bottom: 2px;
+    }
+  }
+  

@@ -17,9 +17,21 @@
       <div>
          <a href="/"> <img src="/img/logo3.jpg" alt="logo" width="65px" class="pk" ></a>
       </div>
+
       <div>
-          <a href="/chat"><button class="btn-primary py-1 px-6 rounded-full  font-bold text-white">Chat now</button></a>
-      </div>
+        <ul class="flex items-center">
+           <li class="ml-6"><a href="/electronics">Electronics</a></li>
+           <li class="ml-6"><a href="/mobiles">Mobiles</a></li>
+           <li class="ml-6"><a href="clothes">Clothes</a></li>
+           <li class="ml-6"><a href="grocery">Grocery</a></li>
+           <li class="ml-6"><a href="sports">Sports</a></li>
+           <li class="ml-6"><a href="food">Fast food</a></li>
+
+           <div class="ml-20">
+            <a href="/chat"><button class="btn-primary py-1 px-4 rounded-full  font-bold text-white">Chat Now</button></a>
+        </div>
+        </ul>
+    </div>
 
         <div>
             <ul class="flex items-center">
@@ -39,7 +51,64 @@
         </div>
     </nav>
     <%- body %>
-    <footer></footer>
+    <footer class="footer-1 bg-gray-100 py-8 sm:py-12 mt-12">
+        <div class="container mx-auto px-4">
+          <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0 mx-auto">
+              <h5 class="text-xl font-bold mb-6">Links</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">
+                  <a href="/" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="/register" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Register</a>
+                </li>
+                <li class="mb-2">
+                  <a href="/login" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Log in</a>
+                </li>
+                <li class="mb-2">
+                  <a href="cart" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Cart</a>
+                </li>
+                <li class="mb-2">
+                    <a href="/chat" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Chat</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+              <h5 class="text-xl font-bold mb-6">Contact</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">Kursi road Lucknow,</li>
+                  <li class="mb-2">Near Baddupur kotwali,</li>
+                  <li class="mb-2">Pin code- 225306,</li>
+                  <li class="mb-2">Mobile- 7379225705,</li>
+                  <li class="mb-2">ashwini.verma.564@gmail.com</li>
+              </ul>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0 mx-auto">
+                <h5 class="text-xl font-bold mb-6">About Developer</h5>
+                <p>Hey! everyone my name is Ashwini Kumar. I am a computer engineer and full stack web developer
+                    I love to teach whatever I know, stay happy😊😊</p>
+              </div>
+            <div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto">
+              <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
+              <div class="flex sm:justify-center xl:justify-start">
+                <a target="_blank" href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"  class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-red-600">
+                    <img src="/img/gmail.png">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/ashwini-verma-023244195/"  class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-red-400">
+                    <img src="/img/linkdin.png">
+                </a>
+                <a target="_blank" href="https://www.icloud.com/"  class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-red-600">
+                    <img src="/img/icloud.png">
+                </a>
+                <a target="_blank" href="https://twitter.com/Ashwini06912003"  class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-red-600">
+                    <img src="/img/twitter.png">
+                </a>
+              </div><br>
+              <p>Anyone can call or text me on my whatsapp number 7379225705, thanks for visiting site</p>
+            </div>
+          </div>
+      </footer>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/app.js"></script>
 </body>
