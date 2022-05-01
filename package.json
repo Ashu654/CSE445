@@ -31,10 +31,11 @@
     "socket.io": "2.3.0"
   },
   "devDependencies": {
-    "laravel-mix": "5.0.4",
+    "laravel-mix": "^6.0.43",
     "nodemon": "^2.0.15",
     "resolve-url-loader": "4.0.0",
     "sass": "^1.43.4",
-    "sass-loader": "12.1.0"
+    "sass-loader": "12.1.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }
